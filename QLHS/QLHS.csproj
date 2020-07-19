@@ -1,0 +1,246 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E9197922-B081-4F22-893A-664D8AD55FC0}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>QLHS</RootNamespace>
+    <AssemblyName>QLHS</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DataProvider.cs" />
+    <Compile Include="fDiem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fDiem.Designer.cs">
+      <DependentUpon>fDiem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fDmk.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fDmk.Designer.cs">
+      <DependentUpon>fDmk.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fHome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fHome.Designer.cs">
+      <DependentUpon>fHome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fLogin.Designer.cs">
+      <DependentUpon>fLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fMain.Designer.cs">
+      <DependentUpon>fMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fNhapdiem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fNhapdiem.Designer.cs">
+      <DependentUpon>fNhapdiem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fQlgv.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fQlgv.Designer.cs">
+      <DependentUpon>fQlgv.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fQlhs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fQlhs.Designer.cs">
+      <DependentUpon>fQlhs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fQllh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fQllh.Designer.cs">
+      <DependentUpon>fQllh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fQltk.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fQltk.Designer.cs">
+      <DependentUpon>fQltk.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fThemlop.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fThemlop.Designer.cs">
+      <DependentUpon>fThemlop.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fThongtin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fThongtin.Designer.cs">
+      <DependentUpon>fThongtin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fThongtingiaovien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fThongtingiaovien.Designer.cs">
+      <DependentUpon>fThongtingiaovien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fThongtinhocsinh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fThongtinhocsinh.Designer.cs">
+      <DependentUpon>fThongtinhocsinh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="fDiem.resx">
+      <DependentUpon>fDiem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fDmk.resx">
+      <DependentUpon>fDmk.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fHome.resx">
+      <DependentUpon>fHome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fLogin.resx">
+      <DependentUpon>fLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fMain.resx">
+      <DependentUpon>fMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fNhapdiem.resx">
+      <DependentUpon>fNhapdiem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fQlgv.resx">
+      <DependentUpon>fQlgv.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fQlhs.resx">
+      <DependentUpon>fQlhs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fQllh.resx">
+      <DependentUpon>fQllh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fQltk.resx">
+      <DependentUpon>fQltk.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fThemlop.resx">
+      <DependentUpon>fThemlop.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fThongtin.resx">
+      <DependentUpon>fThongtin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fThongtingiaovien.resx">
+      <DependentUpon>fThongtingiaovien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fThongtinhocsinh.resx">
+      <DependentUpon>fThongtinhocsinh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images1186527_10_truong_nguyen_chi_trhanh.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-phone-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-marker-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tải xuống.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tải xuống copy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\homepage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\homepage1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\phonebook.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_graduation-cap.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_user-md.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_users.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_user.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
