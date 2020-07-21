@@ -56,6 +56,7 @@
             // 
             // dgv_giaovien
             // 
+            this.dgv_giaovien.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgv_giaovien.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_giaovien.Location = new System.Drawing.Point(12, 48);
             this.dgv_giaovien.Name = "dgv_giaovien";

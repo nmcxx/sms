@@ -48,6 +48,7 @@
             // 
             // dgv_lophoc
             // 
+            this.dgv_lophoc.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgv_lophoc.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_lophoc.Location = new System.Drawing.Point(13, 46);
             this.dgv_lophoc.Name = "dgv_lophoc";

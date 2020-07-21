@@ -40,6 +40,7 @@
             // 
             // dgv_hocsinh
             // 
+            this.dgv_hocsinh.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgv_hocsinh.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_hocsinh.Location = new System.Drawing.Point(12, 51);
             this.dgv_hocsinh.Name = "dgv_hocsinh";

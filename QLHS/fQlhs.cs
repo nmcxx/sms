@@ -71,6 +71,7 @@ namespace QLHS
             }
         }
 
+
         private void fQlhs_Load(object sender, EventArgs e)
         {
             if(checkUserType()==2)
@@ -78,6 +79,10 @@ namespace QLHS
                 btn_diem.Left = 393;
                 btn_thongtin.Left = 474;
                 btn_xoa.Hide();
+            }
+            else
+            {
+                btn_diem.Hide();
             }
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.MaximumSize = this.MinimumSize = this.Size;

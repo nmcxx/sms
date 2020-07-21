@@ -70,7 +70,7 @@ namespace QLHS
                 {
                     txt_hths.Text = dtr["hoten"].ToString();
                     //txt_lh.Text = dtr["malop"].ToString();
-                    txt_ns.Text = dtr["ngaysinh"].ToString();
+                    dtp_nshs.Value = (DateTime)dtr["ngaysinh"];
                     txt_qq.Text = dtr["quequan"].ToString();
                     txt_cmnd.Text = dtr["cmnd"].ToString();
                     if(dtr["gioitinh"].ToString()=="True"){
@@ -85,8 +85,8 @@ namespace QLHS
                     txt_hotenme.Text = dtr["hotenme"].ToString();
                     txt_nncha.Text = dtr["nghenghiepcha"].ToString();
                     txt_nnme.Text = dtr["nghenghiepme"].ToString();
-                    txt_nscha.Text = dtr["ngaysinhcha"].ToString();
-                    txt_nsme.Text = dtr["ngaysinhme"].ToString();
+                    dtp_nscha.Value = (DateTime)dtr["ngaysinhcha"];
+                    dtp_nsme.Value = (DateTime)dtr["ngaysinhme"];
                     txt_qqcha.Text = dtr["quequancha"].ToString();
                     txt_qqme.Text = dtr["quequanme"].ToString();
                     txt_sdtcha.Text = dtr["sdtcha"].ToString();
@@ -125,16 +125,16 @@ namespace QLHS
                     cmd2.Parameters.AddWithValue("@malop", cbb_Lophoc.GetItemText(cbb_Lophoc.SelectedItem));
                     cmd2.Parameters.AddWithValue("@hoten", txt_hths.Text.Trim());
                     cmd2.Parameters.AddWithValue("@gioitinh", age);
-                    cmd2.Parameters.AddWithValue("@ngaysinh", Convert.ToDateTime(txt_ns.Text.Trim()));
+                    cmd2.Parameters.AddWithValue("@ngaysinh", Convert.ToDateTime(dtp_nshs.Value.Date));
                     cmd2.Parameters.AddWithValue("@quequan", txt_qq.Text.Trim());
                     cmd2.Parameters.AddWithValue("@cmnd", txt_cmnd.Text.Trim());
                     cmd2.Parameters.AddWithValue("@htcha", txt_hotencha.Text.Trim());
-                    cmd2.Parameters.AddWithValue("@nscha", Convert.ToDateTime(txt_nscha.Text.Trim()));
+                    cmd2.Parameters.AddWithValue("@nscha", Convert.ToDateTime(dtp_nscha.Value.Date));
                     cmd2.Parameters.AddWithValue("@nncha", txt_nncha.Text.Trim());
                     cmd2.Parameters.AddWithValue("@qqcha", txt_qqcha.Text.Trim());
                     cmd2.Parameters.AddWithValue("@sdtcha", txt_sdtcha.Text.Trim());
                     cmd2.Parameters.AddWithValue("@htme", txt_hotenme.Text.Trim());
-                    cmd2.Parameters.AddWithValue("@nsme", Convert.ToDateTime(txt_nsme.Text.Trim()));
+                    cmd2.Parameters.AddWithValue("@nsme", Convert.ToDateTime(dtp_nsme.Value.Date));
                     cmd2.Parameters.AddWithValue("@nnme", txt_nnme.Text.Trim());
                     cmd2.Parameters.AddWithValue("@qqme", txt_qqme.Text.Trim());
                     cmd2.Parameters.AddWithValue("@sdtme", txt_sdtme.Text.Trim());

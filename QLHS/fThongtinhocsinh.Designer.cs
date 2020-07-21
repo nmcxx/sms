@@ -38,7 +38,6 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.txt_ns = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.txt_qq = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
@@ -49,7 +48,6 @@
             this.label14 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.txt_hotencha = new System.Windows.Forms.TextBox();
-            this.txt_nscha = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
             this.txt_nncha = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
@@ -63,7 +61,6 @@
             this.label21 = new System.Windows.Forms.Label();
             this.txt_nnme = new System.Windows.Forms.TextBox();
             this.label22 = new System.Windows.Forms.Label();
-            this.txt_nsme = new System.Windows.Forms.TextBox();
             this.label23 = new System.Windows.Forms.Label();
             this.txt_hotenme = new System.Windows.Forms.TextBox();
             this.label24 = new System.Windows.Forms.Label();
@@ -72,6 +69,9 @@
             this.btn_quaylai = new System.Windows.Forms.Button();
             this.cbb_gioitinh = new System.Windows.Forms.ComboBox();
             this.cbb_Lophoc = new System.Windows.Forms.ComboBox();
+            this.dtp_nshs = new System.Windows.Forms.DateTimePicker();
+            this.dtp_nscha = new System.Windows.Forms.DateTimePicker();
+            this.dtp_nsme = new System.Windows.Forms.DateTimePicker();
             this.SuspendLayout();
             // 
             // label1
@@ -150,13 +150,6 @@
             this.label7.Size = new System.Drawing.Size(47, 13);
             this.label7.TabIndex = 10;
             this.label7.Text = "Giới tính";
-            // 
-            // txt_ns
-            // 
-            this.txt_ns.Location = new System.Drawing.Point(345, 103);
-            this.txt_ns.Name = "txt_ns";
-            this.txt_ns.Size = new System.Drawing.Size(133, 20);
-            this.txt_ns.TabIndex = 13;
             // 
             // label8
             // 
@@ -241,13 +234,6 @@
             this.txt_hotencha.Name = "txt_hotencha";
             this.txt_hotencha.Size = new System.Drawing.Size(143, 20);
             this.txt_hotencha.TabIndex = 24;
-            // 
-            // txt_nscha
-            // 
-            this.txt_nscha.Location = new System.Drawing.Point(58, 452);
-            this.txt_nscha.Name = "txt_nscha";
-            this.txt_nscha.Size = new System.Drawing.Size(143, 20);
-            this.txt_nscha.TabIndex = 26;
             // 
             // label16
             // 
@@ -354,13 +340,6 @@
             this.label22.TabIndex = 37;
             this.label22.Text = "Nghề nghiệp";
             // 
-            // txt_nsme
-            // 
-            this.txt_nsme.Location = new System.Drawing.Point(382, 452);
-            this.txt_nsme.Name = "txt_nsme";
-            this.txt_nsme.Size = new System.Drawing.Size(143, 20);
-            this.txt_nsme.TabIndex = 36;
-            // 
             // label23
             // 
             this.label23.AutoSize = true;
@@ -433,12 +412,36 @@
             this.cbb_Lophoc.Size = new System.Drawing.Size(133, 21);
             this.cbb_Lophoc.TabIndex = 47;
             // 
+            // dtp_nshs
+            // 
+            this.dtp_nshs.Location = new System.Drawing.Point(345, 100);
+            this.dtp_nshs.Name = "dtp_nshs";
+            this.dtp_nshs.Size = new System.Drawing.Size(133, 20);
+            this.dtp_nshs.TabIndex = 48;
+            // 
+            // dtp_nscha
+            // 
+            this.dtp_nscha.Location = new System.Drawing.Point(58, 453);
+            this.dtp_nscha.Name = "dtp_nscha";
+            this.dtp_nscha.Size = new System.Drawing.Size(143, 20);
+            this.dtp_nscha.TabIndex = 49;
+            // 
+            // dtp_nsme
+            // 
+            this.dtp_nsme.Location = new System.Drawing.Point(382, 452);
+            this.dtp_nsme.Name = "dtp_nsme";
+            this.dtp_nsme.Size = new System.Drawing.Size(143, 20);
+            this.dtp_nsme.TabIndex = 50;
+            // 
             // fThongtinhocsinh
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(585, 385);
+            this.Controls.Add(this.dtp_nsme);
+            this.Controls.Add(this.dtp_nscha);
+            this.Controls.Add(this.dtp_nshs);
             this.Controls.Add(this.cbb_Lophoc);
             this.Controls.Add(this.cbb_gioitinh);
             this.Controls.Add(this.btn_quaylai);
@@ -450,7 +453,6 @@
             this.Controls.Add(this.label21);
             this.Controls.Add(this.txt_nnme);
             this.Controls.Add(this.label22);
-            this.Controls.Add(this.txt_nsme);
             this.Controls.Add(this.label23);
             this.Controls.Add(this.txt_hotenme);
             this.Controls.Add(this.label24);
@@ -460,7 +462,6 @@
             this.Controls.Add(this.label18);
             this.Controls.Add(this.txt_nncha);
             this.Controls.Add(this.label17);
-            this.Controls.Add(this.txt_nscha);
             this.Controls.Add(this.label16);
             this.Controls.Add(this.txt_hotencha);
             this.Controls.Add(this.label15);
@@ -471,7 +472,6 @@
             this.Controls.Add(this.label11);
             this.Controls.Add(this.txt_qq);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.txt_ns);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
@@ -503,7 +503,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox txt_ns;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox txt_qq;
         private System.Windows.Forms.Label label9;
@@ -514,7 +513,6 @@
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.TextBox txt_hotencha;
-        private System.Windows.Forms.TextBox txt_nscha;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.TextBox txt_nncha;
         private System.Windows.Forms.Label label17;
@@ -528,7 +526,6 @@
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.TextBox txt_nnme;
         private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.TextBox txt_nsme;
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.TextBox txt_hotenme;
         private System.Windows.Forms.Label label24;
@@ -537,5 +534,8 @@
         private System.Windows.Forms.Button btn_quaylai;
         private System.Windows.Forms.ComboBox cbb_gioitinh;
         private System.Windows.Forms.ComboBox cbb_Lophoc;
+        private System.Windows.Forms.DateTimePicker dtp_nshs;
+        private System.Windows.Forms.DateTimePicker dtp_nscha;
+        private System.Windows.Forms.DateTimePicker dtp_nsme;
     }
 }
