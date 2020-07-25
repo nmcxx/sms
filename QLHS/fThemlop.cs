@@ -37,6 +37,7 @@ namespace QLHS
 
         private void fThemlop_Load(object sender, EventArgs e)
         {
+            cbb_khoilop.DropDownStyle = ComboBoxStyle.DropDownList;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.MaximumSize = this.MinimumSize = this.Size;
             cbbKhoi();

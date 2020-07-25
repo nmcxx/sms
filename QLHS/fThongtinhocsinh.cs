@@ -52,6 +52,8 @@ namespace QLHS
 
         private void fThongtinhocsinh_Load(object sender, EventArgs e)
         {
+            cbb_Lophoc.DropDownStyle = ComboBoxStyle.DropDownList;
+            cbb_gioitinh.DropDownStyle = ComboBoxStyle.DropDownList;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.MaximumSize = this.MinimumSize = this.Size;
             cbbLop();

@@ -139,6 +139,7 @@ namespace QLHS
             childForm.Show();
         }
 
+
         private void btn_qltk_Click(object sender, EventArgs e)
         {
             openChildForm(new fQltk());
@@ -146,9 +147,7 @@ namespace QLHS
 
         private void btn_trangchu_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            fHome fh = new fHome();
-            fh.Show();
+            activeForm.Close();
         }
 
         private void btn_qlhs_Click(object sender, EventArgs e)

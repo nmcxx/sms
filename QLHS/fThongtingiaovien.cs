@@ -52,6 +52,9 @@ namespace QLHS
 
         private void fThongtingiaovien_Load(object sender, EventArgs e)
         {
+            cbb_bomon.DropDownStyle = ComboBoxStyle.DropDownList;
+            cbb_cnl.DropDownStyle = ComboBoxStyle.DropDownList;
+            cbb_gt.DropDownStyle = ComboBoxStyle.DropDownList;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.MaximumSize = this.MinimumSize = this.Size;
             dtp_ns.Format = DateTimePickerFormat.Short;

@@ -27,6 +27,21 @@ namespace QLHS
                 MessageBox.Show("Vui lòng nhập đầy đủ thông tin cần thêm");
                 return;
             }
+            if (txt_tentaikhoan.Text.Length >= 8)
+            {
+                MessageBox.Show("Tài khoản chỉ được tối đa 7 ký tự");
+                return;
+            }
+            if (txt_matkhau.Text.Length >= 51)
+            {
+                MessageBox.Show("Mật khẩu chỉ được tối đa 50 ký tự");
+                return;
+            }
+            if (txt_loainguoidung.Text != "1" && txt_loainguoidung.Text != "2" && txt_loainguoidung.Text!="3")
+            {
+                MessageBox.Show("Loại người dùng chỉ được từ 1 đến 3");
+                return;
+            }
             try
             {
                 using (SqlConnection connect = new SqlConnection(connectionStr))
@@ -111,6 +126,21 @@ namespace QLHS
             if (txt_tentaikhoan.Enabled == true)
             {
                 MessageBox.Show("Vui lòng chọn tài khoản cần sửa");
+                return;
+            }
+            if (txt_tentaikhoan.Text == "" || txt_matkhau.Text == "" || txt_loainguoidung.Text == "")
+            {
+                MessageBox.Show("Vui lòng nhập đầy đủ thông tin cần sửa");
+                return;
+            }
+            if (txt_matkhau.Text.Length >= 51)
+            {
+                MessageBox.Show("Mật khẩu chỉ được tối đa 50 ký tự");
+                return;
+            }
+            if (txt_loainguoidung.Text != "1" && txt_loainguoidung.Text != "2" && txt_loainguoidung.Text!="3")
+            {
+                MessageBox.Show("Loại người dùng chỉ được từ 1 đến 3");
                 return;
             }
             try

@@ -42,6 +42,7 @@ namespace QLHS
         }
 
         static public string selectUser = "";
+        static private int slHs;
 
         private void btn_themlop_Click(object sender, EventArgs e)
         {
@@ -55,6 +56,7 @@ namespace QLHS
             if (dgv_lophoc.CurrentRow.Index != -1)
             {
                 selectUser = dgv_lophoc.CurrentRow.Cells[1].Value.ToString();
+                slHs = Convert.ToInt32(dgv_lophoc.CurrentRow.Cells[2].Value.ToString());
             }
         }
 
@@ -76,6 +78,11 @@ namespace QLHS
             if (selectUser == "")
             {
                 MessageBox.Show("Vui lòng chọn lớp cần xóa");
+                return;
+            }
+            if (slHs > 0)
+            {
+                MessageBox.Show("Không thể xóa lớp học có học sinh");
                 return;
             }
             using (SqlConnection connect = new SqlConnection(connectionStr))

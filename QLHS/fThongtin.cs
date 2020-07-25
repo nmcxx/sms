@@ -79,6 +79,7 @@ namespace QLHS
                 label1.Text = "Mã học sinh";
                 label5.Text = "Lớp học";
                 label5.Left = 90;
+                label9.Hide();
                 label10.Hide();
                 lbl_cmnd.Hide();
                 using (SqlConnection connect = new SqlConnection(connectionStr))

@@ -52,6 +52,8 @@ namespace QLHS
 
         private void fNhapdiem_Load(object sender, EventArgs e)
         {
+            cbb_loaidiem.DropDownStyle = ComboBoxStyle.DropDownList;
+            cbb_monhoc.DropDownStyle = ComboBoxStyle.DropDownList;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.MaximumSize = this.MinimumSize = this.Size;
             cbbMonHoc();
