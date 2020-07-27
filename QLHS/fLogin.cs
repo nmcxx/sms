@@ -67,6 +67,7 @@ namespace QLHS
 
         private void fLogin_Load(object sender, EventArgs e)
         {
+            this.AcceptButton = btn_dangnhap;
             // co dinh form
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.MaximumSize = this.MinimumSize = this.Size;

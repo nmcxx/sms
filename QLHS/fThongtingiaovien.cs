@@ -31,6 +31,7 @@ namespace QLHS
                 {
                     cbb_cnl.Items.Add(dr[0]);
                 }
+                cbb_cnl.Items.Add("Null");
                 connect.Close();
             }
         }
@@ -50,8 +51,35 @@ namespace QLHS
             }
         }
 
+        static private string cmlop;
+        private void checkmalop()
+        {
+            using (SqlConnection connect = new SqlConnection(connectionStr))
+            {
+                connect.Open();
+                SqlCommand cmd = new SqlCommand("select malop from GiaoVien where username='"+fQlgv.selectUser+"'", connect);
+                SqlDataReader dr = cmd.ExecuteReader();
+                while (dr.Read())
+                {
+                    cmlop = Convert.ToString(dr["malop"]);
+                    /*if (dr["malop"] == DBNull.Value)
+                    {
+                        cmlop="Null";
+                    }
+                    else
+                    {
+                        cmlop=Convert.ToString(dr["malop"]);
+                    }*/
+                }
+                //return;
+                connect.Close();
+            }
+        }
+
+
         private void fThongtingiaovien_Load(object sender, EventArgs e)
         {
+            checkmalop();
             cbb_bomon.DropDownStyle = ComboBoxStyle.DropDownList;
             cbb_cnl.DropDownStyle = ComboBoxStyle.DropDownList;
             cbb_gt.DropDownStyle = ComboBoxStyle.DropDownList;
@@ -94,7 +122,7 @@ namespace QLHS
             }
         }
 
-        private void btn_sua_Click(object sender, EventArgs e)
+        private void GiaoVienUpdateOrDelete()
         {
             using (SqlConnection connect = new SqlConnection(connectionStr))
             {
@@ -112,8 +140,24 @@ namespace QLHS
                 cmd2.CommandType = CommandType.StoredProcedure;
                 cmd2.Parameters.AddWithValue("@mode", "Update");
                 cmd2.Parameters.AddWithValue("@mgv", fQlgv.selectUser);
-                cmd2.Parameters.AddWithValue("@malop", cbb_cnl.GetItemText(cbb_cnl.SelectedItem));
-                cmd2.Parameters.AddWithValue("@mamon", cbb_bomon.GetItemText(cbb_bomon.SelectedItem));
+                if (cbb_cnl.GetItemText(cbb_cnl.SelectedItem) == "Null" || cbb_cnl.GetItemText(cbb_cnl.SelectedItem) == "")
+                {
+                    cmd2.Parameters.AddWithValue("@malop", DBNull.Value);
+                }
+                else
+                {
+                    cmd2.Parameters.AddWithValue("@malop", cbb_cnl.GetItemText(cbb_cnl.SelectedItem));
+                }
+                // cmd2.Parameters.AddWithValue("@malop", cbb_cnl.GetItemText(cbb_cnl.SelectedItem));
+                if (cbb_bomon.GetItemText(cbb_bomon.SelectedItem) == "Null" || cbb_bomon.GetItemText(cbb_bomon.SelectedItem) == "")
+                {
+                    cmd2.Parameters.AddWithValue("@mamon", DBNull.Value);
+                }
+                else
+                {
+                    cmd2.Parameters.AddWithValue("@mamon", cbb_bomon.GetItemText(cbb_bomon.SelectedItem));
+                }
+                //cmd2.Parameters.AddWithValue("@mamon", cbb_bomon.GetItemText(cbb_bomon.SelectedItem));
                 cmd2.Parameters.AddWithValue("@hoten", txt_htgv.Text.Trim());
                 cmd2.Parameters.AddWithValue("@gioitinh", gt);
                 cmd2.Parameters.AddWithValue("@ngaysinh", Convert.ToDateTime(dtp_ns.Value.Date));
@@ -123,6 +167,30 @@ namespace QLHS
                 cmd2.ExecuteNonQuery();
                 MessageBox.Show("Chỉnh sửa thành công");
                 this.Hide();
+                connect.Close();
+            }
+        }
+
+        private void btn_sua_Click(object sender, EventArgs e)
+        {
+            using (SqlConnection connect = new SqlConnection(connectionStr))
+            {
+                connect.Open();
+                SqlCommand cmd = new SqlCommand("select * from giaovien where malop='" + cbb_cnl.GetItemText(cbb_cnl.SelectedItem) + "' and mgv='"+fQlgv.selectUser+"' and malop!='"+cmlop+"'", connect);
+                SqlDataReader dtr = cmd.ExecuteReader();
+                if (dtr.Read() == false)
+                {
+                    GiaoVienUpdateOrDelete();
+                }
+                /*if (dtr.Read())
+                {
+                    MessageBox.Show("Lớp học đã có giáo viên, vui lòng chọn lớp khác");
+                    return;
+                }
+                else
+                {
+                    GiaoVienUpdateOrDelete();
+                }*/
                 connect.Close();
             }
         }
