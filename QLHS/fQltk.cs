@@ -55,7 +55,7 @@ namespace QLHS
                     }
                     else
                     {
-                        SqlCommand cmd2 = new SqlCommand("AccountAddOrEdit", connect);
+                        SqlCommand cmd2 = new SqlCommand("AccountAddOrEdit", connect); 
                         cmd2.CommandType = CommandType.StoredProcedure;
                         cmd2.Parameters.AddWithValue("@mode", "Add");
                         cmd2.Parameters.AddWithValue("@username", txt_tentaikhoan.Text.Trim());
@@ -73,6 +73,7 @@ namespace QLHS
                 MessageBox.Show(ex.Message, "Lỗi hệ thống", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
 
         private void FillDGV()
         {
