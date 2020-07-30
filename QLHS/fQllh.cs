@@ -46,7 +46,7 @@ namespace QLHS
 
         private void btn_themlop_Click(object sender, EventArgs e)
         {
-            mode = false;
+            mode = false; // THEM
             fThemlop ftl = new fThemlop();
             ftl.Show();
         }
@@ -68,7 +68,7 @@ namespace QLHS
                 MessageBox.Show("Vui lòng chọn lớp cần sửa");
                 return;
             }
-            mode = true;
+            mode = true; // SUA
             fThemlop ftl = new fThemlop();
             ftl.Show();
         }

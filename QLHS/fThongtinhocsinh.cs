@@ -124,7 +124,15 @@ namespace QLHS
                     SqlCommand cmd2 = new SqlCommand("HocSinhPHHSEdit", connect);
                     cmd2.CommandType = CommandType.StoredProcedure;
                     cmd2.Parameters.AddWithValue("@mhs", fQlhs.selectUser);
-                    cmd2.Parameters.AddWithValue("@malop", cbb_Lophoc.GetItemText(cbb_Lophoc.SelectedItem));
+                    if (cbb_Lophoc.GetItemText(cbb_Lophoc.SelectedItem) == "Null" || cbb_Lophoc.GetItemText(cbb_Lophoc.SelectedItem) == "")
+                    {
+                        cmd2.Parameters.AddWithValue("@malop", DBNull.Value);
+                    }
+                    else
+                    {
+                        cmd2.Parameters.AddWithValue("@malop", cbb_Lophoc.GetItemText(cbb_Lophoc.SelectedItem));
+                    }
+                    //cmd2.Parameters.AddWithValue("@malop", cbb_Lophoc.GetItemText(cbb_Lophoc.SelectedItem));
                     cmd2.Parameters.AddWithValue("@hoten", txt_hths.Text.Trim());
                     cmd2.Parameters.AddWithValue("@gioitinh", age);
                     cmd2.Parameters.AddWithValue("@ngaysinh", Convert.ToDateTime(dtp_nshs.Value.Date));
